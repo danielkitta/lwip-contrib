@@ -57,7 +57,7 @@ typedef TaskHandle_t      sys_thread_t;
 
 #define sys_msleep(ms)  vTaskDelay(TASK_DELAY_MS(ms))
 
-#define SYS_ARCH_DECL_PROTECT(lev)  (void)0
+#define SYS_ARCH_DECL_PROTECT(lev)  typedef void lev
 #define SYS_ARCH_PROTECT(lev)       taskENTER_CRITICAL()
 #define SYS_ARCH_UNPROTECT(lev)     taskEXIT_CRITICAL()
 
